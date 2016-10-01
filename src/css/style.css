@@ -1,0 +1,16 @@
+#leftCol{
+  border: thin solid black;
+}
+
+#banner{
+  background-image: url("http://i.imgur.com/eajrIAX.jpg");
+  background-repeat: no-repeat;
+}
+
+#background{
+  background-color: black;
+}
+
+body{
+  color: white;
+}
