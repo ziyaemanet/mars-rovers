@@ -1,13 +1,25 @@
 import API from '../API';
+import AppDispatcher from '../AppDispatcher';
 
-const StockActions = {
-  fetchSymbols(company){
-    API.fetchSymbols(company);
+const RoverActions = {
+  pullPics(rover,date){
+    API.pullPics(rover,date);
   },
 
-  fetchQuote(symbol){
-    API.fetchQuote(symbol);
-  }
+  setCamera(camera){
+    AppDispatcher.dispatch({
+      type: 'SET_CAMERA',
+      payload: {camera}
+    })
+  },
+
+  clearPictures(){
+    AppDispatcher.dispatch({
+      type: 'CLEAR_PICTURES'
+    })
+  },
+
+
 }
 
-export default StockActions;
+export default RoverActions;

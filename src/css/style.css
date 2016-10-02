@@ -1,16 +1,80 @@
+
 #leftCol{
   border: thin solid black;
 }
+h3 {
+    color: red;
+    opacity: 0.6;
+}
+
+#redMars {
+    color: red;
+    opacity: 0.8;
+}
+
+#status {
+  display: block;
+  float: right;
+  position: relative;
+  background-color: #000000;
+
+}
 
 #banner{
+  height: 200px;
+  width: 100%;
   background-image: url("http://i.imgur.com/eajrIAX.jpg");
   background-repeat: no-repeat;
+  background-position: right top;
+background-attachment: fixed;
 }
 
 #background{
   background-color: black;
 }
+#marsSpin  {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100px;
+}
+
+#mars_2  {
+
+  position:fixed;
+     padding:0;
+     margin:0;
+     top:0;
+     left:0;
+     width: 100%;
+     height: 100%;
+  background-image: url('http://i.imgur.com/M9imvKRb.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+}
+/*#mars_2  {
+  width: 100%;
+  height: 700px;
+  background-image: url('http://i.imgur.com/M9imvKRb.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+}*/
+
+height: 3px;{
+  color: rgba(255, 0, 0, 0.3);
+}
 
 body{
   color: white;
+
+}
+
+ul{
+    list-style-type: circle;
+    /*list-style-image: url('./images/marsAnime_sm.gif');*/
+}
+
+ul{
+  list-style: circle;
 }

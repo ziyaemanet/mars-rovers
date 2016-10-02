@@ -1,18 +1,20 @@
+import moment from 'moment';
+
 const info = {
   curiosity: {
     cameras:['FHAZ','RHAZ','MAST','CHEMCAM','MAHLI','MARDI','NAVCAM'],
     dateStart:'2012-08-06',
-    totalPics:'280105'
+    dateEnd:  moment().subtract(7,'days').format('YYYY-MM-DD')
   },
   opportunity: {
     cameras:['FHAZ','RHAZ','NAVCAM','PANCAM','MINITES'],
-    dateStart:'2004-01-25',
-    totalPics: '183991'
+    dateStart:'2004-01-26',
+    dateEnd: moment().subtract(7,'days').format('YYYY-MM-DD')
   },
   spirit: {
     cameras:['FHAZ','RHAZ','NAVCAM','PANCAM','MINITES'],
-    dateStart:'2004-01-04',
-    totalPics: '124550'
+    dateStart:'2004-01-05',
+    dateEnd: '2010-03-20'
   }
 };
 

@@ -1,17 +1,11 @@
 import AppDispatcher from '../AppDispatcher';
 
 const ServerActions = {
-  recieveSymbols(symbols){
-    AppDispatcher.dispatch({
-      type: 'RECIEVE_SYMBOLS',
-      payload: {symbols}
-    })
-  },
 
-  recieveQuote(quote){
+  recievePictures(pictures){
     AppDispatcher.dispatch({
-      type: 'RECIEVE_QUOTE',
-      payload: {quote}
+      type: 'RECIEVE_PICTURES',
+      payload: {pictures}
     })
   }
 }

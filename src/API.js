@@ -1,18 +1,17 @@
-import jsonp from 'jsonp';
-
 import ServerActions from './actions/ServerActions';
+import { get } from 'axios'
 
 const API = {
-  fetchSymbols(company){
-    jsonp(`http://dev.markitondemand.com/MODApis/Api/v2/Lookup/jsonp?input=${company.replace(/ /g,'_')}`,(err,data) => {
-      ServerActions.recieveSymbols(data);
-    });
-  },
+  pullPics(rover,date){
+    get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?earth_date=${date}&api_key=80iZHoydfkqZocT9j9R0fOvU8mF4CcbmrdGFqQIx`)
+    .then(res =>  {
+      ServerActions.recievePictures(res.data.photos);
+    })
+    .catch(err => {
+      console.log('err:', err);
+      ServerActions.recievePictures([]);
 
-  fetchQuote(symbol){
-    jsonp(`http://dev.markitondemand.com/MODApis/Api/v2/Quote/jsonp?symbol=${symbol}`,(err,data) => {
-      ServerActions.recieveQuote(data);
-    });
+    })
   }
 }
 

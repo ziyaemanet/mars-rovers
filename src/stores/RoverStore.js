@@ -1,21 +1,27 @@
 import {EventEmitter} from 'events';
 import AppDispatcher from '../AppDispatcher';
 
-let _symbols = [];
-let _quote = {};
+let _pictures = [];
+let _camera = '';
 
-class StockStore extends EventEmitter{
+
+class RoverStore extends EventEmitter{
   constructor(){
     super();
 
     AppDispatcher.register(action => {
       switch (action.type) {
-        case 'RECIEVE_SYMBOLS':
-          _symbols = action.payload.symbols;
+        case 'RECIEVE_PICTURES':
+          _pictures = action.payload.pictures;
           this.emit('CHANGE');
           break;
-        case 'RECIEVE_QUOTE':
-          _quote = action.payload.quote;
+        case 'SET_CAMERA':
+          _camera = action.payload.camera;
+          this.emit('CHANGE');
+          break;
+        case 'CLEAR_PICTURES':
+          _pictures = [];
+          _camera = '';
           this.emit('CHANGE');
           break;
         default:
@@ -33,14 +39,15 @@ class StockStore extends EventEmitter{
     this.removeListener('CHANGE',callback);
   }
 
-  getSymbols(){
-    return _symbols;
+  getPictures(){
+    return _pictures;
   }
 
-  getQuote(){
-    return _quote;
+  getCamera(){
+    return _camera;
   }
+
 
 }
 
-export default new StockStore();
+export default new RoverStore();
