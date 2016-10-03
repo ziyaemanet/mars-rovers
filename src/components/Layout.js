@@ -5,7 +5,7 @@ export default class Layout extends Component {
   render() {
     return (
       <div className='container'>
-
+<h1>test</h1>
         <div id="banner" className="row">
           <h1 id="redMars" className='text-center'>Mars Rover Photos</h1>
           <img src="" alt=""/>
