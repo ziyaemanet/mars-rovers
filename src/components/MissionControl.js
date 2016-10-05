@@ -10,8 +10,6 @@ export default class MissionControl extends Component {
 
     return (
       <div>
-        {/* <div id="mars_2"></div> */}
-        <h1>Mission Control</h1>
         <h3>Mars Information</h3>
 
         <p>The solar day, by contrast, is the time it takes for the Earth to rotate
@@ -29,7 +27,7 @@ export default class MissionControl extends Component {
         planet with a thin atmosphere composed primarily of carbon dioxide.
       </p>
 
-
+      <div><img id="roverFamily" src="http://i.imgur.com/Rr8QEJ2.jpg"/></div>
 
       <br/>
       <h3>Mars Planet Profile</h3>

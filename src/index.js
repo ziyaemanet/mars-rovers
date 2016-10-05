@@ -10,13 +10,16 @@ import RoverMain from './components/RoverMain';
 import './stores/RoverStore';
 
 render(
-  <div id="background">
-    <Router history={browserHistory}>
-      <Route path="/" component={Layout}>
-        <IndexRoute component={MissionControl}></IndexRoute>
-        <Route path="/rover/:rover" component={RoverMain}></Route>
-      </Route>
-    </Router>
+  <div>
+    <div id="background"></div>
+    <div id="content">
+      <Router history={browserHistory}>
+        <Route path="/" component={Layout}>
+          <IndexRoute component={MissionControl}></IndexRoute>
+          <Route path="/rover/:rover" component={RoverMain}></Route>
+        </Route>
+      </Router>
+    </div>
   </div>,
   document.getElementById('root')
 );

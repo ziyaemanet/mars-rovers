@@ -8,14 +8,17 @@ export default class RoverInfo extends Component {
   }
 
   render() {
-    let roverInfo = RoverBios.getBio(this.props.rover).info;
+    let rover = RoverBios.getBio(this.props.rover);
 
 
     return (
-      <div>
-        <h1>Rover Info</h1>
-        <div>
-          {roverInfo}
+      <div id='roverText'>
+        <h2>Rover Info</h2>
+        <div id="img">
+          <img src={rover.src}/>
+        </div>
+        <div id='roverInfoText'>
+          {rover.info}
         </div>
       </div>
     )

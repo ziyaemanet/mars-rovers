@@ -74,15 +74,11 @@ export default class RoverGallery extends Component {
 
     return (
         <div>
+        <div className="row">
+        {images.length ? <Gallery images={images}/> : hasPictures}
+        </div>
           <div className="row">
-            <div className="col-sm-12"><h1>Gallery</h1></div>
-            {/* <div className="col-sm-6"><br/><br/>
-              <button className="btn btn-default" id="down" onClick={this.scrollPics}>Previous 50</button>
-              <button className="btn btn-default" id="up" onClick={this.scrollPics}>Next 50</button>
-            </div> */}
-          </div>
-          <div className="row">
-            {images.length ? <Gallery images={images}/> : hasPictures}
+            <div id="roverGallery" className="col-sm-12"><h1>Gallery</h1></div>
           </div>
         </div>
     )
